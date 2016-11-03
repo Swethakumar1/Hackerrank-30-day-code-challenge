@@ -1,0 +1,43 @@
+class Student extends Person{
+    protected int[] testScores; 
+   
+    Student(String firstName,String lastName,int identification,int[] testScores)
+        { 
+          super(firstName,lastName,identification);   
+          this.testScores=testScores;  
+           
+         } 
+        char calculate()
+        {  
+            int sum=0;  
+            int average=0;
+        for(int i=0; i<=this.testScores.length-1; i++)
+             {
+                sum+=this.testScores[i]; 
+                 
+             }
+         average=(sum/(this.testScores.length));
+         if(average>=90 && average<=100)
+             {
+               return('O'); 
+             }
+         if(average>=80 && average<90)
+             {
+             return('E'); 
+         }
+         if(average>=70 && average<80)
+             {
+             return('A'); 
+         }
+        if(average>=55 && average<70)
+             {
+             return('P'); 
+         }
+        if(average>=40&&average<55)
+            {
+            return ('D'); 
+        }
+         return ('T'); 
+     
+        }
+} 
