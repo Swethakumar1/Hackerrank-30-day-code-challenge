@@ -1,0 +1,25 @@
+public Difference(int[] elements)
+        {
+            this.elements=elements; 
+        } 
+    public void computeDifference() { 
+        int m=elements[0]; 
+        int n=elements[0];
+        for(int i=1;i<elements.length; i++)
+            { 
+                if(elements[i]>m)
+                    {
+                    m=elements[i]; 
+                }
+                else if(elements[i]<n)
+                    {
+                    n=elements[i]; 
+                }
+                
+                
+        }
+            maximumDifference=Math.abs(m-n); 
+                
+                
+        }
+        
